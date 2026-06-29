@@ -47,25 +47,25 @@
     {
       "src": "assets/images/1782204948938__________________________.png",
       "alt": "สมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ พระบรมราชชนนีพันปีหลวง",
-      "focal_point": "center 0%",
-      "zoom": true
+      "focal_point": "center center",
+      "zoom": false
     },
     {
       "src": "assets/images/1782290249369__________6.jpg",
       "alt": "สมเด็จพระเจ้าลูกเธอ เจ้าฟ้ากรมหลวงราชสาริณีสิริพัชร มหาวัชรราชธิดา",
-      "focal_point": "center 0%",
+      "focal_point": "center center",
       "zoom": false
     },
     {
       "src": "assets/images/1782289061540_DSC_1419.JPG",
       "alt": "รับปริญญา รุ่น 17 ปีการศึกษา 2568",
-      "focal_point": "center 25%",
+      "focal_point": "center center",
       "zoom": true
     },
     {
       "src": "assets/images/1782289093548_S__39026789_0.jpg",
       "alt": "นิสิตแพทย์รุ่นที่ 18",
-      "focal_point": "center 30%",
+      "focal_point": "center center",
       "zoom": true
     },
     {
