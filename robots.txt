@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://phichitmec-app.github.io/LandingPages/sitemap.xml

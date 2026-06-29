@@ -640,7 +640,14 @@ async function loadContentDatabase() {
         visualContainer.appendChild(img);
       }
     }
-    setTxt('about-float-icon', data.about.float_icon);
+    const floatIconEl = document.getElementById('about-float-icon');
+    if (floatIconEl) {
+      if (data.about.float_icon && (data.about.float_icon.includes('/') || data.about.float_icon.includes('.'))) {
+        floatIconEl.innerHTML = `<img src="${data.about.float_icon}" alt="Logo" style="height: 28px; width: auto; object-fit: contain; vertical-align: middle;">`;
+      } else {
+        floatIconEl.textContent = data.about.float_icon || "🏛️";
+      }
+    }
     setTxt('about-float-title', data.about.float_title);
     setTxt('about-float-detail', data.about.float_detail);
 
@@ -864,7 +871,7 @@ async function loadContentDatabase() {
         const linkText = isFacebook ? 'อ่านต่อบน Facebook' : 'อ่านเพิ่มเติม';
         const linkAttr = item.link ? `href="${item.link}" target="_blank" rel="noopener noreferrer"` : `href="#"`;
         const imageContent = item.image
-          ? `<img src="${item.image}" alt="${item.title}">`
+          ? `<img src="${item.image}" alt="${item.title}" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='assets/images/logo.png'; this.style.padding='20px'; this.style.objectFit='contain';">`
           : icon;
 
         return `
@@ -965,7 +972,11 @@ function initAboutModal() {
   const modalBody = document.getElementById('about-modal-body');
 
   const openModal = (icon, title, bodyText, imageUrl) => {
-    modalIcon.textContent = icon;
+    if (icon && (icon.includes('/') || icon.includes('.'))) {
+      modalIcon.innerHTML = `<img src="${icon}" alt="${title}" style="height: 28px; width: auto; object-fit: contain; vertical-align: middle; margin-right: 8px;">`;
+    } else {
+      modalIcon.textContent = icon;
+    }
     modalTitle.textContent = title;
 
     // Clear previous content safely
