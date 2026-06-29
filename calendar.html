@@ -49,7 +49,7 @@
         <a href="index.html#news" class="nav-link" role="menuitem">ข่าวสาร</a>
         <a href="index.html#student-union" class="nav-link" role="menuitem">สโมสรนิสิต</a>
         <a href="index.html#services" class="nav-link active" role="menuitem">บริการ</a>
-        <a href="index.html#contact" class="nav-cta" role="menuitem">📍 ติดต่อเรา</a>
+        <a href="index.html#contact" class="nav-cta" role="menuitem">ติดต่อเรา</a>
       </div>
 
       <!-- Theme Toggle -->
@@ -160,6 +160,26 @@
        CLIENT-SIDE JAVASCRIPT
        ============================================ -->
   <script>
+    function formatThaiDate(dateStr) {
+      if (!dateStr) return '';
+      dateStr = String(dateStr).replace(/📅/g, '').trim();
+      const match = dateStr.match(/^(\d{4})[-/](\d{1,2})[-/](\d{1,2})$/);
+      if (match) {
+        const year = parseInt(match[1], 10);
+        const month = parseInt(match[2], 10) - 1;
+        const day = parseInt(match[3], 10);
+        const thaiMonths = [
+          "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน",
+          "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"
+        ];
+        if (month >= 0 && month < 12) {
+          const thaiYear = year > 2500 ? year : year + 543;
+          return `${day} ${thaiMonths[month]} ${thaiYear}`;
+        }
+      }
+      return dateStr;
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       let db = null;
       let activeCalendarIndex = 0;
@@ -218,7 +238,7 @@
 
         const activeItem = db.calendar[activeCalendarIndex] || db.calendar[0];
         document.getElementById('cal-active-title').textContent = activeItem.title;
-        document.getElementById('cal-active-date').textContent = `📅 อัปเดตล่าสุด: ${activeItem.date}`;
+        document.getElementById('cal-active-date').textContent = `📅 อัปเดตล่าสุด: ${formatThaiDate(activeItem.date)}`;
 
         const iframe = document.getElementById('pdf-embed-frame');
         iframe.style.display = 'block';

@@ -2,6 +2,26 @@
    MEC PHICHIT — Interactive JavaScript
    ============================================ */
 
+window.formatThaiDate = function(dateStr) {
+  if (!dateStr) return '';
+  dateStr = String(dateStr).replace(/📅/g, '').trim();
+  const match = dateStr.match(/^(\d{4})[-/](\d{1,2})[-/](\d{1,2})$/);
+  if (match) {
+    const year = parseInt(match[1], 10);
+    const month = parseInt(match[2], 10) - 1;
+    const day = parseInt(match[3], 10);
+    const thaiMonths = [
+      "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน",
+      "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"
+    ];
+    if (month >= 0 && month < 12) {
+      const thaiYear = year > 2500 ? year : year + 543;
+      return `${day} ${thaiMonths[month]} ${thaiYear}`;
+    }
+  }
+  return dateStr;
+};
+
 document.addEventListener('DOMContentLoaded', async () => {
   initThemeToggle();
   initSamoModal();
@@ -577,8 +597,6 @@ async function loadContentDatabase() {
         setHtml('hero-cta-about', `${data.hero.cta_about} <span class="btn-icon" aria-hidden="true">→</span>`);
       }
     }
-    const ctaContact = document.getElementById('hero-cta-contact-text');
-    if (ctaContact) ctaContact.textContent = data.hero.cta_contact;
 
     // Hero stats
     const heroStatsContainer = document.getElementById('hero-stats');
@@ -642,10 +660,11 @@ async function loadContentDatabase() {
     }
     const floatIconEl = document.getElementById('about-float-icon');
     if (floatIconEl) {
-      if (data.about.float_icon && (data.about.float_icon.includes('/') || data.about.float_icon.includes('.'))) {
-        floatIconEl.innerHTML = `<img src="${data.about.float_icon}" alt="Logo" style="height: 28px; width: auto; object-fit: contain; vertical-align: middle;">`;
+      const floatIconSrc = data.about.float_icon || "assets/images/logo.png";
+      if (floatIconSrc.includes('/') || floatIconSrc.includes('.')) {
+        floatIconEl.innerHTML = `<img src="${floatIconSrc}" alt="Logo" style="height: 28px; width: auto; object-fit: contain; vertical-align: middle;">`;
       } else {
-        floatIconEl.textContent = data.about.float_icon || "🏛️";
+        floatIconEl.textContent = floatIconSrc;
       }
     }
     setTxt('about-float-title', data.about.float_title);
@@ -666,7 +685,7 @@ async function loadContentDatabase() {
     const historyTrigger = document.getElementById('about-history-trigger');
     if (historyTrigger) {
       historyTrigger.dataset.title = data.about.float_title || "ประวัติความเป็นมา";
-      historyTrigger.dataset.icon = data.about.float_icon || "🎓";
+      historyTrigger.dataset.icon = data.about.float_icon || "assets/images/logo.png";
       historyTrigger.dataset.body = data.about.history_full || "";
       historyTrigger.dataset.image = data.about.history_image || "";
     }
@@ -880,7 +899,7 @@ async function loadContentDatabase() {
               ${imageContent}
             </a>
             <div class="news-body">
-              <div class="news-date">${item.date}</div>
+              <div class="news-date">📅 ${formatThaiDate(item.date)}</div>
               <h3 class="news-title">
                 <a ${linkAttr} style="color: inherit; text-decoration: none; transition: color var(--transition-fast);">${item.title}</a>
               </h3>
@@ -899,6 +918,22 @@ async function loadContentDatabase() {
     if (contactBadge) contactBadge.innerHTML = `<span class="badge-dot" aria-hidden="true"></span>${data.contact.badge}`;
     setHtml('contact-title', `${data.contact.title_line1}<span class="accent-text">${data.contact.title_line2}</span>`);
     setTxt('contact-subtitle', data.contact.subtitle);
+
+    const renderContactIcon = (id, iconVal, fallback) => {
+      const el = document.getElementById(id);
+      if (!el) return;
+      const val = iconVal || fallback;
+      if (val.includes('/') || val.includes('.')) {
+        el.innerHTML = `<img src="${val}" alt="Icon" style="width: 24px; height: 24px; object-fit: contain; vertical-align: middle;">`;
+      } else {
+        el.textContent = val;
+      }
+    };
+
+    renderContactIcon('contact-icon-address', data.contact.address_icon, '📍');
+    renderContactIcon('contact-icon-phone', data.contact.phone_icon, '📞');
+    renderContactIcon('contact-icon-facebook', data.contact.facebook_icon, '📘');
+    renderContactIcon('contact-icon-hours', data.contact.hours_icon, '⏰');
 
     setTxt('contact-address', data.contact.address);
     setTxt('contact-phone', data.contact.phone);
@@ -1011,7 +1046,7 @@ function initAboutModal() {
   if (historyTrigger) {
     historyTrigger.addEventListener('click', () => {
       openModal(
-        historyTrigger.dataset.icon || "🎓",
+        historyTrigger.dataset.icon || "assets/images/logo.png",
         historyTrigger.dataset.title || "ประวัติความเป็นมา",
         historyTrigger.dataset.body || "",
         historyTrigger.dataset.image || ""
@@ -1132,7 +1167,7 @@ function initSamoModal() {
         .replace(/&quot;/g, '"');
 
       if (modalCaption) modalCaption.textContent = cleanCaption;
-      if (modalDate) modalDate.textContent = dateText;
+      if (modalDate) modalDate.textContent = formatThaiDate(dateText);
       if (modalLikes) modalLikes.textContent = likesCount;
       if (modalComments) modalComments.textContent = commentsCount;
     }

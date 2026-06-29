@@ -49,7 +49,7 @@
         <a href="index.html#news" class="nav-link" role="menuitem">ข่าวสาร</a>
         <a href="index.html#student-union" class="nav-link" role="menuitem">สโมสรนิสิต</a>
         <a href="index.html#services" class="nav-link active" role="menuitem">บริการ</a>
-        <a href="index.html#contact" class="nav-cta" role="menuitem">📍 ติดต่อเรา</a>
+        <a href="index.html#contact" class="nav-cta" role="menuitem">ติดต่อเรา</a>
       </div>
 
       <!-- Theme Toggle -->
@@ -154,6 +154,26 @@
        CLIENT-SIDE JAVASCRIPT
        ============================================ -->
   <script>
+    function formatThaiDate(dateStr) {
+      if (!dateStr) return '';
+      dateStr = String(dateStr).replace(/📅/g, '').trim();
+      const match = dateStr.match(/^(\d{4})[-/](\d{1,2})[-/](\d{1,2})$/);
+      if (match) {
+        const year = parseInt(match[1], 10);
+        const month = parseInt(match[2], 10) - 1;
+        const day = parseInt(match[3], 10);
+        const thaiMonths = [
+          "มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน",
+          "กรกฎาคม", "สิงหาคม", "กันยายน", "ตุลาคม", "พฤศจิกายน", "ธันวาคม"
+        ];
+        if (month >= 0 && month < 12) {
+          const thaiYear = year > 2500 ? year : year + 543;
+          return `${day} ${thaiMonths[month]} ${thaiYear}`;
+        }
+      }
+      return dateStr;
+    }
+
     document.addEventListener('DOMContentLoaded', () => {
       let db = null;
       let activeFilter = 'all';
@@ -232,7 +252,7 @@
                 <div class="doc-type-icon ${typeClass}">${typeLabel}</div>
                 <div class="doc-meta">
                   <h3 class="doc-card-title" title="${doc.title}">${doc.title}</h3>
-                  <div class="doc-card-date">📅 วันที่อัปเดต: ${doc.date}</div>
+                  <div class="doc-card-date">📅 วันที่อัปเดต: ${formatThaiDate(doc.date)}</div>
                 </div>
               </div>
               <div class="doc-actions">
