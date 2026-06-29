@@ -1,0 +1,17 @@
+# ============================================
+# MEC Phichit - Git Ignore Configuration
+# ============================================
+
+# Security: Exclude Admin Portal & Dev Server from GitHub Pages
+admin.html
+server.js
+
+# Exclude Agent notes and logs
+agent.md
+*.log
+
+# IDE & System files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

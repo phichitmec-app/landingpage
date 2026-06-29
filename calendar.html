@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>ปฏิทินกิจกรรม & วิชาการ | MEC Phichit</title>
+  <meta name="description" content="ปฏิทินกิจกรรม ปฏิทินการศึกษา และตารางกิจกรรมวิชาการของศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📅</text></svg>">
+
+  <!-- Prevent theme flash -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('mec-theme') || 'light';
+      if (t === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+    })();
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css?v=5.4">
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION (Consistent with index.html)
+       ============================================ -->
+  <nav class="navbar scrolled" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html#hero" class="nav-brand">
+        <div class="nav-logo" aria-hidden="true">
+          <img src="assets/images/logo.png" alt="MEC Phichit Logo">
+        </div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">MEC Phichit</span>
+          <span class="nav-brand-sub">Medical Education Center</span>
+        </div>
+      </a>
+
+      <div class="nav-links" id="nav-links" role="menubar">
+        <a href="index.html#hero" class="nav-link" role="menuitem">หน้าแรก</a>
+        <a href="index.html#about" class="nav-link" role="menuitem">เกี่ยวกับเรา</a>
+        <a href="index.html#news" class="nav-link" role="menuitem">ข่าวสาร</a>
+        <a href="index.html#student-union" class="nav-link" role="menuitem">สโมสรนิสิต</a>
+        <a href="index.html#services" class="nav-link active" role="menuitem">บริการ</a>
+        <a href="index.html#contact" class="nav-cta" role="menuitem">📍 ติดต่อเรา</a>
+      </div>
+
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="สลับธีมมืด/สว่าง" title="สลับธีมมืด/สว่าง">
+        <div class="theme-toggle-track">
+          <span class="track-sun" aria-hidden="true">☀️</span>
+          <span class="track-moon" aria-hidden="true">🌙</span>
+        </div>
+        <div class="theme-toggle-knob">
+          <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+        </div>
+      </button>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </nav>
+
+  <!-- ============================================
+       CONTENT SECTION
+       ============================================ -->
+  <section class="subpage-body container calendar-section">
+    <div class="subpage-header">
+      <a href="index.html#services" class="btn-back">← กลับหน้าบริการหลัก</a>
+      <h1 class="section-title" id="subpage-header-title">ปฏิทิน<span class="accent-text">กิจกรรม & วิชาการ</span></h1>
+      <p class="section-subtitle" id="subpage-header-sub" style="margin: 0 auto;">ตรวจสอบกำหนดการ กิจกรรมวิชาการ และปฏิทินการศึกษาของศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร</p>
+    </div>
+
+    <!-- Calendar Selector Tabs (Dynamically rendered if > 1 calendar) -->
+    <div class="calendar-selector-row" id="calendar-selector-row" style="display: none;">
+      <!-- Populated dynamically -->
+    </div>
+
+    <!-- Full-Width Embed PDF Viewer Container -->
+    <div class="calendar-embed-wrapper" id="calendar-embed-wrapper">
+      <div class="calendar-embed-header">
+        <div class="calendar-info-meta">
+          <h2 class="calendar-active-title" id="cal-active-title">กำลังโหลดข้อมูลปฏิทิน...</h2>
+          <span class="calendar-active-date" id="cal-active-date">📅 อัปเดตล่าสุด: -</span>
+        </div>
+        <div class="calendar-action-btns">
+          <a href="#" id="btn-cal-download" download class="btn-cal-action btn-cal-download">📥 ดาวน์โหลดเอกสาร PDF</a>
+          <a href="#" id="btn-cal-external" target="_blank" rel="noopener noreferrer" class="btn-cal-action btn-cal-external">🔗 เปิดไฟล์ในแท็บใหม่</a>
+        </div>
+      </div>
+      <div class="calendar-embed-body">
+        <iframe id="pdf-embed-frame" class="calendar-embed-frame" src="" title="PDF Calendar Viewer"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top" style="grid-template-columns: 2fr 2fr;">
+        <div class="footer-brand">
+          <a href="index.html#hero" class="nav-brand" style="margin-bottom: 1rem;">
+            <div class="nav-logo" aria-hidden="true">
+              <img src="assets/images/logo.png" alt="MEC Phichit Logo">
+            </div>
+            <div class="nav-brand-text">
+              <span class="nav-brand-name">MEC Phichit</span>
+              <span class="nav-brand-sub">Medical Education Center</span>
+            </div>
+          </a>
+          <p class="footer-desc" id="footer-desc">ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร</p>
+        </div>
+        <div class="footer-links-col" style="text-align: right; display: flex; flex-direction: column; align-items: flex-end; justify-content: center;">
+          <h4 class="footer-heading">ลิงก์ด่วน</h4>
+          <div class="footer-links" style="align-items: flex-end;">
+            <a href="index.html#hero" class="footer-link">หน้าแรก</a>
+            <a href="index.html#services" class="footer-link">บริการหลัก</a>
+            <a href="forms.html" class="footer-link">แบบฟอร์มออนไลน์</a>
+            <a href="announcements.html" class="footer-link">ประกาศ</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy" id="footer-copy">© 2548 — 2568 ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร. สงวนลิขสิทธิ์.</p>
+        <p class="footer-credits" id="footer-credits">Clinical Medical Education Center, Phichit Hospital</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Action Controls -->
+  <div class="floating-controls">
+    <button class="scroll-top-btn" id="scroll-top-btn" aria-label="เลื่อนขึ้นไปด้านบนสุด" title="เลื่อนขึ้นด้านบน">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+    <a href="https://www.facebook.com/PhichitMedicalEducation" target="_blank" rel="noopener noreferrer" class="chat-float-btn" id="chat-float-btn" aria-label="ติดต่อสอบถามทาง Facebook" title="ติดต่อสอบถามทาง Facebook">
+      <div class="chat-float-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.45 5.51 3.716 7.218V22l3.407-1.87c.928.257 1.91.395 2.917.395 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.06 12.422l-2.544-2.716-4.965 2.716 5.46-5.797 2.607 2.716 4.902-2.716-5.46 5.797z"/>
+        </svg>
+      </div>
+    </a>
+  </div>
+
+  <!-- ============================================
+       CLIENT-SIDE JAVASCRIPT
+       ============================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let db = null;
+      let activeCalendarIndex = 0;
+
+      initThemeToggle();
+      initNavigation();
+      initFloatingControls();
+      loadData();
+
+      // Fetch dynamic calendar data
+      async function loadData() {
+        try {
+          const res = await fetch('data/content.json');
+          if (!res.ok) throw new Error('Failed to load JSON');
+          db = await res.json();
+
+          // Populate Header & Footer details
+          if (db.calendar_info) {
+            const titleEl = document.getElementById('subpage-header-title');
+            const subEl = document.getElementById('subpage-header-sub');
+            if (titleEl) titleEl.innerHTML = `${db.calendar_info.title_line1 || ''}<span class="accent-text">${db.calendar_info.title_line2 || ''}</span>`;
+            if (subEl) subEl.textContent = db.calendar_info.subtitle || '';
+          }
+          if (db.footer) {
+            document.getElementById('footer-desc').textContent = db.footer.desc || '';
+            document.getElementById('footer-copy').textContent = db.footer.copy || '';
+            document.getElementById('footer-credits').textContent = db.footer.credits || '';
+          }
+
+          renderCalendar();
+        } catch (err) {
+          console.error('Error loading calendar database:', err);
+          document.getElementById('cal-active-title').textContent = 'เกิดข้อผิดพลาดในการโหลดไฟล์ข้อมูล';
+        }
+      }
+
+      // Render calendar view
+      function renderCalendar() {
+        if (!db || !db.calendar || db.calendar.length === 0) {
+          document.getElementById('cal-active-title').textContent = 'ยังไม่มีปฏิทินกิจกรรมในระบบ';
+          document.getElementById('pdf-embed-frame').style.display = 'none';
+          return;
+        }
+
+        const selectorRow = document.getElementById('calendar-selector-row');
+        if (db.calendar.length > 1) {
+          selectorRow.style.display = 'flex';
+          selectorRow.innerHTML = db.calendar.map((item, idx) => `
+            <button class="calendar-tab-btn ${idx === activeCalendarIndex ? 'active' : ''}" onclick="switchCalendar(${idx})">
+              📅 ${item.title}
+            </button>
+          `).join('');
+        } else {
+          selectorRow.style.display = 'none';
+        }
+
+        const activeItem = db.calendar[activeCalendarIndex] || db.calendar[0];
+        document.getElementById('cal-active-title').textContent = activeItem.title;
+        document.getElementById('cal-active-date').textContent = `📅 อัปเดตล่าสุด: ${activeItem.date}`;
+
+        const iframe = document.getElementById('pdf-embed-frame');
+        iframe.style.display = 'block';
+        iframe.src = activeItem.file;
+
+        const dlBtn = document.getElementById('btn-cal-download');
+        dlBtn.href = activeItem.file;
+        dlBtn.download = activeItem.title;
+
+        const extBtn = document.getElementById('btn-cal-external');
+        extBtn.href = activeItem.file;
+      }
+
+      window.switchCalendar = (idx) => {
+        activeCalendarIndex = idx;
+        renderCalendar();
+      };
+
+      // Theme toggle engine (consistent with app.js)
+      function initThemeToggle() {
+        const toggleBtn = document.getElementById('theme-toggle');
+        if (!toggleBtn) return;
+
+        const iconEl = toggleBtn.querySelector('.theme-toggle-icon');
+        const root = document.documentElement;
+
+        const savedTheme = localStorage.getItem('mec-theme') || 'light';
+        applyTheme(savedTheme, false);
+
+        toggleBtn.addEventListener('click', () => {
+          const currentTheme = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+          applyTheme(newTheme, true);
+        });
+
+        function applyTheme(theme, animate) {
+          if (theme === 'light') {
+            root.setAttribute('data-theme', 'light');
+          } else {
+            root.removeAttribute('data-theme');
+          }
+          if (iconEl) {
+            iconEl.textContent = theme === 'light' ? '☀️' : '🌙';
+          }
+          localStorage.setItem('mec-theme', theme);
+        }
+      }
+
+      // Mobile Menu navigation
+      function initNavigation() {
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const navOverlay = document.getElementById('nav-overlay');
+
+        if (navToggle) {
+          navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            navToggle.classList.toggle('active');
+            if (navOverlay) navOverlay.classList.toggle('show', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+          });
+        }
+
+        if (navOverlay) {
+          navOverlay.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            navToggle.classList.remove('active');
+            navOverlay.classList.remove('show');
+            document.body.style.overflow = '';
+          });
+        }
+      }
+
+      function initFloatingControls() {
+        const scrollTopBtn = document.getElementById('scroll-top-btn');
+        if (!scrollTopBtn) return;
+
+        window.addEventListener('scroll', () => {
+          if (window.pageYOffset > 300) {
+            scrollTopBtn.classList.add('visible');
+          } else {
+            scrollTopBtn.classList.remove('visible');
+          }
+        }, { passive: true });
+
+        scrollTopBtn.addEventListener('click', () => {
+          smoothScrollToTop();
+        });
+      }
+
+      function smoothScrollToTop() {
+        const startPos = window.pageYOffset;
+        if (startPos === 0) return;
+        const duration = 800;
+        let startTime = null;
+
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1);
+          const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+          window.scrollTo(0, startPos * (1 - easeOutCubic));
+
+          if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+          } else {
+            window.scrollTo(0, 0);
+          }
+        }
+        requestAnimationFrame(animation);
+      }
+    });
+  </script>
+</body>
+</html>

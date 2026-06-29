@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO Meta -->
+  <title>ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร | MEC Phichit</title>
+  <meta name="description"
+    content="ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร — ผลิตแพทย์คุณภาพเพื่อชาวชนบท ภายใต้โครงการ CPIRD ร่วมกับคณะแพทยศาสตร์ มหาวิทยาลัยนเรศวร">
+  <meta name="keywords"
+    content="MEC Phichit, ศูนย์แพทยศาสตรศึกษา, โรงพยาบาลพิจิตร, CPIRD, แพทยศาสตร์, มหาวิทยาลัยนเรศวร">
+  <meta name="author" content="ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร">
+  <meta property="og:description"
+    content="ผลิตแพทย์คุณภาพเพื่อชาวชนบท ภายใต้โครงการ CPIRD ร่วมกับคณะแพทยศาสตร์ มหาวิทยาลัยนเรศวร">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sites.google.com/cpird.in.th/phichit">
+  <meta property="og:locale" content="th_TH">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎓</text></svg>">
+
+  <!-- Prevent theme flash -->
+  <script>
+    (function () {
+      var t = localStorage.getItem('mec-theme') || 'light';
+      if (t === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+    })();
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css?v=5.4">
+</head>
+
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+       ============================================ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="#hero" class="nav-brand" id="nav-brand">
+        <div class="nav-logo" aria-hidden="true">
+          <img src="assets/images/logo.png" alt="MEC Phichit Logo" id="nav-logo-img">
+        </div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-name" id="nav-brand-name">MEC Phichit</span>
+          <span class="nav-brand-sub" id="nav-brand-sub">Medical Education Center</span>
+        </div>
+      </a>
+
+      <div class="nav-links" id="nav-links" role="menubar">
+        <a href="#hero" class="nav-link active" role="menuitem">หน้าแรก</a>
+        <a href="#about" class="nav-link" role="menuitem">เกี่ยวกับเรา</a>
+        <a href="#news" class="nav-link" role="menuitem">ข่าวสาร</a>
+        <a href="#student-union" class="nav-link" role="menuitem">สโมสรนิสิต</a>
+        <a href="#services" class="nav-link" role="menuitem">บริการ</a>
+        <a href="#contact" class="nav-cta" role="menuitem">📍 ติดต่อเรา</a>
+      </div>
+
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="สลับธีมมืด/สว่าง" title="สลับธีมมืด/สว่าง">
+        <div class="theme-toggle-track">
+          <span class="track-sun" aria-hidden="true">☀️</span>
+          <span class="track-moon" aria-hidden="true">🌙</span>
+        </div>
+        <div class="theme-toggle-knob">
+          <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+        </div>
+      </button>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </nav>
+
+  <!-- ============================================
+       GALLERY SECTION (Atmosphere & Activities)
+       ============================================ -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <!-- Slider Component -->
+      <div class="slider-container reveal">
+        <div class="slider-wrapper" id="slider-wrapper">
+          <!-- Populated dynamically -->
+        </div>
+
+        <!-- Navigation Buttons -->
+        <button class="slider-btn prev" id="slider-prev" aria-label="ภาพก่อนหน้า">❮</button>
+        <button class="slider-btn next" id="slider-next" aria-label="ภาพถัดไป">❯</button>
+
+        <!-- Indicators -->
+        <div class="slider-indicators" id="slider-indicators">
+          <!-- Populated dynamically -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       HERO SECTION
+       ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg-effects">
+      <div class="hero-orb hero-orb--1"></div>
+      <div class="hero-orb hero-orb--2"></div>
+      <div class="hero-orb hero-orb--3"></div>
+      <canvas id="particles-canvas" aria-hidden="true"></canvas>
+      <div class="hero-grid" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot" aria-hidden="true"></span>
+        <span id="hero-badge-text">CPIRD — Collaborative Project to Increase Production of Rural Doctors</span>
+      </div>
+
+      <h1 class="hero-title">
+        <span class="hero-title-line" id="hero-title-line1">ศูนย์แพทยศาสตรศึกษา</span>
+        <span class="hero-title-line accent-text" id="hero-title-line2">ชั้นคลินิก</span>
+      </h1>
+
+      <p class="hero-subtitle" id="hero-subtitle">
+        ผลิตบัณฑิตแพทย์ที่มีคุณภาพและได้มาตรฐานวิชาชีพ เพื่อแก้ปัญหาการขาดแคลนแพทย์ในส่วนภูมิภาค
+        ร่วมกับคณะแพทยศาสตร์ มหาวิทยาลัยนเรศวร
+      </p>
+
+      <div class="hero-actions">
+        <a href="#about" class="btn btn-secondary" id="hero-cta-about">
+          <span id="hero-cta-about-text">เกี่ยวกับเรา</span>
+          <span class="btn-icon" aria-hidden="true">→</span>
+        </a>
+        <a href="#contact" class="btn btn-primary" id="hero-cta-contact-text">
+          📍 ติดต่อเรา
+        </a>
+      </div>
+
+      <div class="hero-stats" id="hero-stats">
+        <!-- Stats populated dynamically -->
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="hero-scroll-text">Scroll</span>
+      <span class="hero-scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ============================================
+       ABOUT SECTION
+       ============================================ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <!-- Left: Image/Visual -->
+        <div class="about-image-wrapper reveal-left">
+          <div class="about-image-card">
+            <div id="about-visual-container" style="width: 100%; height: 100%;">
+              <!-- Populated dynamically with img or video -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="about-content reveal-right">
+          <div class="section-badge" id="about-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            เกี่ยวกับเรา
+          </div>
+          <h2 class="section-title" id="about-title">
+            สร้างแพทย์คุณภาพ<br>
+            <span class="accent-text">เพื่อชาวชนบท</span>
+          </h2>
+          <p class="about-text" id="about-p1">
+            ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร จัดตั้งขึ้นตามมติคณะรัฐมนตรี
+            เมื่อวันที่ 15 มิถุนายน พ.ศ. 2547 เพื่อดำเนินงานโครงการร่วมผลิตแพทย์เพิ่มเพื่อชาวชนบท (CPIRD)
+            โดยมีความร่วมมือกับคณะแพทยศาสตร์ มหาวิทยาลัยนเรศวร
+          </p>
+          <p class="about-text" id="about-p2">
+            เริ่มเปิดดำเนินการจัดการเรียนการสอนเมื่อวันที่ 18 มีนาคม พ.ศ. 2548
+            ปัจจุบันยังเป็นโรงพยาบาลร่วมสอนของคณะแพทยศาสตร์ศิริราชพยาบาล มหาวิทยาลัยมหิดล
+            ตั้งแต่ปีการศึกษา 2562 เพื่อฝึกปฏิบัติงานนักศึกษาแพทย์ชั้นปีที่ 6
+          </p>
+
+          <!-- CTA Button for Full History Modal -->
+          <div class="about-action-row">
+            <button class="btn btn-secondary" id="about-history-trigger">
+              <span class="btn-icon">📜</span> อ่านประวัติความเป็นมาฉบับเต็ม
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Philosophy Showcase (Vision & Mission) -->
+      <div class="about-philosophy-showcase reveal">
+        <div class="philosophy-divider">
+          <span class="divider-line"></span>
+          <span class="divider-dot"></span>
+          <span class="divider-line"></span>
+        </div>
+
+        <div class="philosophy-grid">
+          <!-- Left: Vision -->
+          <div class="philosophy-col vision-col">
+            <div class="philosophy-header">
+              <span class="philosophy-tag">VISION</span>
+              <h3 id="about-vision-title">วิสัยทัศน์</h3>
+            </div>
+            <div class="vision-content-wrapper">
+              <img src="assets/images/logo.png" class="vision-quote-watermark" alt="MEC Logo Watermark"
+                aria-hidden="true">
+              <p class="vision-lead" id="about-vision-text">
+                มุ่งเน้นผลิตบัณฑิตแพทย์ที่มีมาตรฐานสากล เปี่ยมด้วยคุณภาพและคุณธรรม
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Mission -->
+          <div class="philosophy-col mission-col">
+            <div class="philosophy-header">
+              <span class="philosophy-tag accent-purple">MISSION</span>
+              <h3 id="about-mission-title">พันธกิจ</h3>
+            </div>
+            <div class="mission-content-wrapper">
+              <p class="mission-lead" id="about-mission-text">
+                พัฒนาศักยภาพอาจารย์แพทย์ สร้างงานวิจัย และบริการวิชาการเพื่อชุมชนและสังคม
+              </p>
+              <ul class="mission-bullets-list" id="about-mission-list">
+                <!-- Dynamic bullets split from about.mission_full -->
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       STATS BAR
+       ============================================ -->
+  <div class="stats-bar">
+    <div class="container">
+      <div class="stats-grid stagger-children" id="stats-bar-grid">
+        <!-- Stats populated dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       PROGRAMS SECTION
+       ============================================ -->
+  <section class="programs" id="programs">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title" id="programs-title">
+          หลักสูตร<span class="accent-text">แพทยศาสตรบัณฑิต</span>
+        </h2>
+        <p class="section-subtitle" id="programs-subtitle">
+          จัดการเรียนการสอนชั้นคลินิก (ชั้นปีที่ 4-6) เน้นฝึกปฏิบัติจริงในแผนกต่างๆ
+          ของโรงพยาบาลพิจิตร
+        </p>
+      </div>
+
+      <div class="programs-grid stagger-children" id="programs-grid">
+        <!-- Cards populated dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       NEWS SECTION
+       ============================================ -->
+  <section class="news" id="news">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge" id="news-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          ข่าวสารและกิจกรรม
+        </div>
+        <h2 class="section-title" id="news-title">
+          ข่าวสาร<span class="accent-text">ล่าสุด</span>
+        </h2>
+        <p class="section-subtitle" id="news-subtitle">
+          ติดตามข่าวสาร กิจกรรม และความเคลื่อนไหวล่าสุดของศูนย์แพทยศาสตรศึกษาชั้นคลินิก
+        </p>
+      </div>
+
+      <div class="news-grid stagger-children" id="news-grid">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       STUDENT UNION (medphichit.samo) SECTION
+       ============================================ -->
+  <section class="student-union" id="student-union">
+    <div class="container">
+      <div class="section-header reveal">
+        <!-- <div class="section-badge" id="samo-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          สโมสรนิสิต
+        </div> -->
+        <h2 class="section-title" id="samo-title">
+          สโมสรนิสิต<span class="accent-text">medphichit.samo</span>
+        </h2>
+        <p class="section-subtitle" id="samo-subtitle">
+          ศูนย์รวมกิจกรรม ข่าวสาร และการขับเคลื่อนโดยนิสิตแพทย์
+        </p>
+      </div>
+
+      <!-- Instagram Style Profile Card -->
+      <div class="samo-profile-card reveal">
+        <div class="samo-avatar-wrapper">
+          <div class="samo-avatar-ring" aria-hidden="true"></div>
+          <img src="assets/images/logo.png" alt="medphichit.samo.official" class="samo-avatar" id="samo-avatar-img">
+        </div>
+        <div class="samo-profile-info">
+          <div class="samo-profile-header-row">
+            <h3 class="samo-username" id="samo-profile-username">medphichit.samo.official</h3>
+            <a href="https://www.instagram.com/medphichit.samo.official/" target="_blank" rel="noopener noreferrer"
+              class="btn-ig-follow" id="samo-follow-btn">
+              📍 ติดตามบน Instagram
+            </a>
+          </div>
+          <div class="samo-stats-row">
+            <div class="samo-stat-item"><strong id="samo-posts-count">6</strong>โพสต์</div>
+            <div class="samo-stat-item"><strong id="samo-followers-count">320+</strong>ผู้ติดตาม</div>
+            <div class="samo-stat-item"><strong id="samo-following-count">150+</strong>กำลังติดตาม</div>
+          </div>
+          <p class="samo-bio" id="samo-profile-bio">
+            ✨ สโมสรนิสิตแพทย์ รพ.พิจิตร (MEC Phichit Student Union)
+          </p>
+        </div>
+      </div>
+
+      <!-- Instagram Grid Feed -->
+      <div class="samo-feed-grid stagger-children" id="samo-feed-grid">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       SERVICES SECTION
+       ============================================ -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge" id="services-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          บริการศูนย์แพทย์
+        </div>
+        <h2 class="section-title" id="services-title">
+          บริการ<span class="accent-text">สำหรับบุคลากร</span>
+        </h2>
+        <p class="section-subtitle" id="services-subtitle">
+          ระบบสนับสนุนการเรียนการสอนและบริการสำหรับอาจารย์แพทย์ นิสิตแพทย์ และบุคลากร
+        </p>
+      </div>
+
+      <div class="services-grid stagger-children" id="services-grid">
+        <!-- Populated dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       CONTACT SECTION
+       ============================================ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-badge" id="contact-badge">
+          <span class="badge-dot" aria-hidden="true"></span>
+          ติดต่อเรา
+        </div>
+        <h2 class="section-title" id="contact-title">
+          ช่องทาง<span class="accent-text">การติดต่อ</span>
+        </h2>
+        <p class="section-subtitle" id="contact-subtitle">
+          สอบถามข้อมูลเพิ่มเติมหรือติดต่อศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📍</div>
+            <div class="contact-details">
+              <h4>ที่อยู่</h4>
+              <p id="contact-address">ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร เลขที่ 110 ถนนศรีมาลา ตำบลในเมือง
+                อำเภอเมืองพิจิตร จังหวัดพิจิตร 66000</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📞</div>
+            <div class="contact-details">
+              <h4>เบอร์โทรศัพท์</h4>
+              <p id="contact-phone">056-611355</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">📘</div>
+            <div class="contact-details">
+              <h4>Facebook</h4>
+              <p><a href="https://www.facebook.com/MECPhichit" id="contact-facebook" target="_blank"
+                  rel="noopener noreferrer">ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร</a></p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon" aria-hidden="true">⏰</div>
+            <div class="contact-details">
+              <h4>เวลาทำการ</h4>
+              <p id="contact-hours">จันทร์ - ศุกร์ | 08:30 น. - 16:30 น. (เว้นวันหยุดราชการ)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-map reveal-right">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3871.9546059632863!2d100.3418854759047!3d16.43528292978007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30e19d4b0050854d%3A0xe54e6fa16bdf6fd5!2z4LmC4Lij4LiH4Lie4Lii4Liy4Lia4Liy4Lil4Lie4Li04LiI4Li04LiV4Lij!5e0!3m2!1sth!2sth!4v1719216980000!5m2!1sth!2sth"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="แผนที่โรงพยาบาลพิจิตร"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Brand Column -->
+        <div class="footer-brand">
+          <a href="#hero" class="nav-brand">
+            <div class="nav-logo" aria-hidden="true">
+              <img src="assets/images/logo.png" alt="MEC Phichit Logo" id="footer-logo-img">
+            </div>
+            <div class="nav-brand-text">
+              <span class="nav-brand-name" id="footer-brand-name">MEC Phichit</span>
+              <span class="nav-brand-sub" id="footer-brand-sub">Medical Education Center</span>
+            </div>
+          </a>
+          <p class="footer-desc" id="footer-desc">
+            ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร
+            ภายใต้โครงการร่วมผลิตแพทย์เพิ่มเพื่อชาวชนบท (CPIRD)
+          </p>
+          <div class="footer-social" id="footer-social-container">
+            <a href="#" class="social-link" aria-label="Facebook" title="Facebook">📘</a>
+            <a href="#" class="social-link" aria-label="YouTube" title="YouTube">▶️</a>
+            <a href="#" class="social-link" aria-label="LINE" title="LINE">💬</a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-heading">ลิงก์ด่วน</h4>
+          <div class="footer-links" id="footer-quick-links">
+            <a href="#about" class="footer-link">เกี่ยวกับเรา</a>
+            <a href="#services" class="footer-link">บริการ</a>
+            <a href="#student-union" class="footer-link">สโมสรนิสิต</a>
+            <a href="#news" class="footer-link">ข่าวสาร</a>
+            <a href="#contact" class="footer-link">ติดต่อเรา</a>
+          </div>
+        </div>
+
+        <!-- Partner Links -->
+        <div>
+          <h4 class="footer-heading">หน่วยงานที่เกี่ยวข้อง</h4>
+          <div class="footer-links" id="footer-partner-links">
+            <a href="https://www.cpird.in.th" target="_blank" rel="noopener" class="footer-link">สบพช. (CPIRD)</a>
+            <a href="https://www.nu.ac.th" target="_blank" rel="noopener" class="footer-link">มหาวิทยาลัยนเรศวร</a>
+            <a href="https://www.si.mahidol.ac.th" target="_blank" rel="noopener" class="footer-link">ศิริราชพยาบาล</a>
+            <a href="https://www.moph.go.th" target="_blank" rel="noopener" class="footer-link">กระทรวงสาธารณสุข</a>
+          </div>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h4 class="footer-heading">ทรัพยากร</h4>
+          <div class="footer-links" id="footer-resource-links">
+            <a href="#" class="footer-link">คลังความรู้</a>
+            <a href="#" class="footer-link">วารสารโรงพยาบาล</a>
+            <a href="#" class="footer-link">ศูนย์ความรู้ (e-Library)</a>
+            <a href="#" class="footer-link">กิจการนิสิต</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy" id="footer-copy">
+          © 2548 — 2568 ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร. สงวนลิขสิทธิ์.
+        </p>
+        <p class="footer-credits" id="footer-credits">
+          Clinical Medical Education Center, Phichit Hospital — CPIRD Network
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       TRIBUTE POPUP MODAL
+       ============================================ -->
+  <div id="tribute-modal" class="tribute-modal" aria-hidden="true" role="dialog" aria-labelledby="tribute-title">
+    <div class="tribute-modal-overlay"></div>
+    <div class="tribute-modal-container">
+      <button class="tribute-modal-close" id="tribute-modal-close" aria-label="ปิดป๊อปอัป">&times;</button>
+      <div class="tribute-modal-content">
+        <img src="assets/images/tribute.jpg" alt="ทรงพระเจริญ" class="tribute-image" id="tribute-image">
+        <div class="tribute-modal-actions">
+          <button class="btn btn-primary btn-enter-site" id="tribute-enter-btn">
+            เข้าสู่เว็บไซต์ <span class="btn-icon">➔</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       ABOUT DETAIL MODAL
+       ============================================ -->
+  <div id="about-detail-modal" class="about-modal" aria-hidden="true" role="dialog">
+    <div class="about-modal-overlay" id="about-modal-overlay"></div>
+    <div class="about-modal-container">
+      <button class="about-modal-close" id="about-modal-close" aria-label="ปิดป๊อปอัป">&times;</button>
+      <div class="about-modal-content">
+        <div class="about-modal-header">
+          <span class="about-modal-icon" id="about-modal-icon">🎓</span>
+          <h3 class="about-modal-title" id="about-modal-title">หัวข้อ</h3>
+        </div>
+        <div class="about-modal-body" id="about-modal-body">
+          <!-- Text details populated dynamically -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       SAMO INSTAGRAM POST DETAIL MODAL
+       ============================================ -->
+  <div id="samo-post-modal" class="samo-modal" aria-hidden="true" role="dialog">
+    <div class="samo-modal-overlay" id="samo-modal-overlay"></div>
+    <div class="samo-modal-container">
+      <button class="samo-modal-close" id="samo-modal-close" aria-label="ปิดป๊อปอัป">&times;</button>
+
+      <!-- Embed wrapper -->
+      <div class="samo-modal-embed-wrapper" id="samo-modal-embed-wrapper" style="display: none;"></div>
+
+      <!-- Left side: Large Post Image -->
+      <div class="samo-modal-left" id="samo-modal-left">
+        <img src="" alt="Post Image" class="samo-modal-img" id="samo-modal-img-el">
+      </div>
+
+      <!-- Right side: Caption and Stats -->
+      <div class="samo-modal-right" id="samo-modal-right">
+        <!-- Header -->
+        <div class="samo-modal-author-header">
+          <a href="https://www.instagram.com/medphichit.samo.official/" target="_blank" rel="noopener noreferrer"
+            class="samo-author-profile">
+            <img src="assets/images/logo.png" alt="Samo Logo" class="samo-author-avatar" id="samo-modal-avatar-el">
+            <span class="samo-author-name" id="samo-modal-author-name">medphichit.samo.official</span>
+          </a>
+        </div>
+
+        <!-- Scrollable Caption Body -->
+        <div class="samo-modal-body">
+          <div class="samo-modal-caption-row">
+            <p class="samo-modal-caption-text" id="samo-modal-caption-text-el">
+              Caption content goes here
+            </p>
+          </div>
+          <span class="samo-modal-date" id="samo-modal-date-el">1 วันที่ผ่านมา</span>
+        </div>
+
+        <!-- Meta/Footer -->
+        <div class="samo-modal-meta-footer">
+          <div class="samo-modal-stats">
+            <span>❤️ <strong id="samo-modal-likes-el">0</strong> ไลก์</span>
+            <span>💬 <strong id="samo-modal-comments-el">0</strong> ความเห็น</span>
+          </div>
+          <a href="https://www.instagram.com/medphichit.samo.official/" target="_blank" rel="noopener noreferrer"
+            class="btn-ig-view-post" id="samo-modal-ig-link">
+            ดูโพสต์นี้บน Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       FLOATING ACTION CONTROLS (Scroll-to-top & Chat)
+       ============================================ -->
+  <div class="floating-controls">
+    <button class="scroll-top-btn" id="scroll-top-btn" aria-label="เลื่อนขึ้นไปด้านบนสุด" title="เลื่อนขึ้นด้านบน">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+    <a href="https://www.facebook.com/PhichitMedicalEducation" target="_blank" rel="noopener noreferrer" class="chat-float-btn" id="chat-float-btn" aria-label="ติดต่อสอบถามทาง Facebook" title="ติดต่อสอบถามทาง Facebook">
+      <div class="chat-float-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.45 5.51 3.716 7.218V22l3.407-1.87c.928.257 1.91.395 2.917.395 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.06 12.422l-2.544-2.716-4.965 2.716 5.46-5.797 2.607 2.716 4.902-2.716-5.46 5.797z"/>
+        </svg>
+      </div>
+    </a>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/app.js?v=5.4"></script>
+</body>
+
+</html>

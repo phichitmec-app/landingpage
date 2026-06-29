@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  
+  <title>ประกาศ | MEC Phichit</title>
+  <meta name="description" content="คลังเอกสารประกาศ ระเบียบการ ข้อบังคับ และคำสั่งต่างๆ ของศูนย์แพทยศาสตรศึกษาชั้นคลินิก">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📢</text></svg>">
+
+  <!-- Prevent theme flash -->
+  <script>
+    (function() {
+      var t = localStorage.getItem('mec-theme') || 'light';
+      if (t === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        document.documentElement.removeAttribute('data-theme');
+      }
+    })();
+  </script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css?v=5.4">
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION (Consistent with index.html)
+       ============================================ -->
+  <nav class="navbar scrolled" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html#hero" class="nav-brand">
+        <div class="nav-logo" aria-hidden="true">
+          <img src="assets/images/logo.png" alt="MEC Phichit Logo">
+        </div>
+        <div class="nav-brand-text">
+          <span class="nav-brand-name">MEC Phichit</span>
+          <span class="nav-brand-sub">Medical Education Center</span>
+        </div>
+      </a>
+
+      <div class="nav-links" id="nav-links" role="menubar">
+        <a href="index.html#hero" class="nav-link" role="menuitem">หน้าแรก</a>
+        <a href="index.html#about" class="nav-link" role="menuitem">เกี่ยวกับเรา</a>
+        <a href="index.html#news" class="nav-link" role="menuitem">ข่าวสาร</a>
+        <a href="index.html#student-union" class="nav-link" role="menuitem">สโมสรนิสิต</a>
+        <a href="index.html#services" class="nav-link active" role="menuitem">บริการ</a>
+        <a href="index.html#contact" class="nav-cta" role="menuitem">📍 ติดต่อเรา</a>
+      </div>
+
+      <!-- Theme Toggle -->
+      <button class="theme-toggle" id="theme-toggle" aria-label="สลับธีมมืด/สว่าง" title="สลับธีมมืด/สว่าง">
+        <div class="theme-toggle-track">
+          <span class="track-sun" aria-hidden="true">☀️</span>
+          <span class="track-moon" aria-hidden="true">🌙</span>
+        </div>
+        <div class="theme-toggle-knob">
+          <span class="theme-toggle-icon" aria-hidden="true">🌙</span>
+        </div>
+      </button>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div class="nav-overlay" id="nav-overlay"></div>
+  </nav>
+
+  <!-- ============================================
+       CONTENT SECTION
+       ============================================ -->
+  <section class="subpage-body container">
+    <div class="subpage-header">
+      <a href="index.html#services" class="btn-back">← กลับหน้าบริการหลัก</a>
+      <h1 class="section-title" id="subpage-header-title">คลัง<span class="accent-text">ประกาศ & คำสั่ง</span></h1>
+      <p class="section-subtitle" id="subpage-header-sub" style="margin: 0 auto;">ประกาศทั่วไป ระเบียบข้อบังคับ และตารางประกาศต่างๆ ของศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร</p>
+    </div>
+
+    <!-- Search & Filter Controls -->
+    <div class="search-filter-row reveal">
+      <div class="search-wrapper">
+        <input type="text" id="doc-search" placeholder="ค้นหาประกาศหรือคำสั่ง...">
+      </div>
+      <div class="filter-group">
+        <button class="filter-btn active" data-filter="all">ทั้งหมด</button>
+        <button class="filter-btn" data-filter="pdf">PDF</button>
+        <button class="filter-btn" data-filter="word">Word</button>
+      </div>
+    </div>
+
+    <!-- Document Grid -->
+    <div class="document-grid stagger-children revealed" id="document-grid">
+      <!-- Populated dynamically -->
+    </div>
+  </section>
+
+  <!-- ============================================
+       PDF PREVIEW MODAL
+       ============================================ -->
+  <div class="preview-modal" id="preview-modal">
+    <div class="preview-modal-overlay" id="preview-modal-overlay"></div>
+    <div class="preview-modal-content">
+      <div class="preview-modal-header">
+        <h3 class="preview-modal-title" id="preview-modal-title">แสดงตัวอย่างเอกสาร</h3>
+        <button class="preview-modal-close" id="preview-modal-close" aria-label="ปิด">&times;</button>
+      </div>
+      <div class="preview-modal-body">
+        <iframe id="preview-iframe" src="" title="PDF Preview"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top" style="grid-template-columns: 2fr 2fr;">
+        <div class="footer-brand">
+          <a href="index.html#hero" class="nav-brand" style="margin-bottom: 1rem;">
+            <div class="nav-logo" aria-hidden="true">
+              <img src="assets/images/logo.png" alt="MEC Phichit Logo">
+            </div>
+            <div class="nav-brand-text">
+              <span class="nav-brand-name">MEC Phichit</span>
+              <span class="nav-brand-sub">Medical Education Center</span>
+            </div>
+          </a>
+          <p class="footer-desc" id="footer-desc">ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร</p>
+        </div>
+        <div class="footer-links-col" style="text-align: right; display: flex; flex-direction: column; align-items: flex-end; justify-content: center;">
+          <h4 class="footer-heading">ลิงก์ด่วน</h4>
+          <div class="footer-links" style="align-items: flex-end;">
+            <a href="index.html#hero" class="footer-link">หน้าแรก</a>
+            <a href="index.html#services" class="footer-link">บริการหลัก</a>
+            <a href="forms.html" class="footer-link">แบบฟอร์มออนไลน์</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copy" id="footer-copy">© 2548 — 2568 ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร. สงวนลิขสิทธิ์.</p>
+        <p class="footer-credits" id="footer-credits">Clinical Medical Education Center, Phichit Hospital</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       CLIENT-SIDE JAVASCRIPT
+       ============================================ -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      let db = null;
+      let activeFilter = 'all';
+      let searchQuery = '';
+
+      initThemeToggle();
+      initNavigation();
+      initFloatingControls();
+      loadData();
+
+      // Fetch dynamic announcements data
+      async function loadData() {
+        try {
+          const res = await fetch('data/content.json');
+          if (!res.ok) throw new Error('Failed to load JSON');
+          db = await res.json();
+
+          // Populate Header & Footer details
+          if (db.announcements_info) {
+            const titleEl = document.getElementById('subpage-header-title');
+            const subEl = document.getElementById('subpage-header-sub');
+            if (titleEl) titleEl.innerHTML = `${db.announcements_info.title_line1 || ''}<span class="accent-text">${db.announcements_info.title_line2 || ''}</span>`;
+            if (subEl) subEl.textContent = db.announcements_info.subtitle || '';
+          }
+          if (db.footer) {
+            document.getElementById('footer-desc').textContent = db.footer.desc || '';
+            document.getElementById('footer-copy').textContent = db.footer.copy || '';
+            document.getElementById('footer-credits').textContent = db.footer.credits || '';
+          }
+          
+          renderDocuments();
+          setupEventListeners();
+        } catch (err) {
+          console.error('Error loading announcements database:', err);
+          document.getElementById('document-grid').innerHTML = `
+            <div class="no-documents-msg">
+              <span>⚠️</span>
+              <p>เกิดข้อผิดพลาดในการโหลดไฟล์ข้อมูล กรุณาลองใหม่อีกครั้งภายหลัง</p>
+            </div>
+          `;
+        }
+      }
+
+      // Render documents with filters
+      function renderDocuments() {
+        const grid = document.getElementById('document-grid');
+        grid.innerHTML = '';
+
+        if (!db || !db.announcements) {
+          showEmptyMessage();
+          return;
+        }
+
+        const filtered = db.announcements.filter(doc => {
+          const matchesFilter = activeFilter === 'all' || doc.type === activeFilter;
+          const matchesSearch = doc.title.toLowerCase().includes(searchQuery.toLowerCase());
+          return matchesFilter && matchesSearch;
+        });
+
+        if (filtered.length === 0) {
+          showEmptyMessage();
+          return;
+        }
+
+        filtered.forEach(doc => {
+          const isPdf = doc.type === 'pdf';
+          const typeLabel = isPdf ? 'PDF' : 'DOCX';
+          const typeClass = isPdf ? 'pdf' : 'word';
+          const previewBtn = isPdf 
+            ? `<button class="btn-preview" onclick="openPreview('${doc.file}', '${doc.title.replace(/'/g, "\\'")}')">👁️ ดูตัวอย่าง</button>`
+            : `<button class="btn-preview" style="opacity: 0.5; cursor: not-allowed;" disabled title="ดูตัวอย่างได้เฉพาะไฟล์ PDF">👁️ ดูตัวอย่าง</button>`;
+
+          grid.innerHTML += `
+            <div class="document-card reveal">
+              <div class="doc-info-header">
+                <div class="doc-type-icon ${typeClass}">${typeLabel}</div>
+                <div class="doc-meta">
+                  <h3 class="doc-card-title" title="${doc.title}">${doc.title}</h3>
+                  <div class="doc-card-date">📅 วันที่อัปเดต: ${doc.date}</div>
+                </div>
+              </div>
+              <div class="doc-actions">
+                ${previewBtn}
+                <a href="${doc.file}" download class="btn-download">📥 ดาวน์โหลด</a>
+              </div>
+            </div>
+          `;
+        });
+      }
+
+      function showEmptyMessage() {
+        const grid = document.getElementById('document-grid');
+        grid.innerHTML = `
+          <div class="no-documents-msg">
+            <span>📂</span>
+            <p>ไม่พบไฟล์ประกาศหรือคำสั่งที่ตรงกับการค้นหา</p>
+          </div>
+        `;
+      }
+
+      function setupEventListeners() {
+        // Search Input
+        const searchInput = document.getElementById('doc-search');
+        searchInput.addEventListener('input', (e) => {
+          searchQuery = e.target.value.trim();
+          renderDocuments();
+        });
+
+        // Filter Buttons
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeFilter = btn.dataset.filter;
+            renderDocuments();
+          });
+        });
+
+        // Preview Close Modal
+        const modal = document.getElementById('preview-modal');
+        const overlay = document.getElementById('preview-modal-overlay');
+        const closeBtn = document.getElementById('preview-modal-close');
+
+        const closeModal = () => {
+          modal.classList.remove('active');
+          document.getElementById('preview-iframe').src = '';
+          document.body.style.overflow = '';
+        };
+
+        overlay.addEventListener('click', closeModal);
+        closeBtn.addEventListener('click', closeModal);
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') closeModal();
+        });
+      }
+
+      // Exposed modal triggers
+      window.openPreview = (filePath, title) => {
+        const modal = document.getElementById('preview-modal');
+        const titleEl = document.getElementById('preview-modal-title');
+        const iframe = document.getElementById('preview-iframe');
+
+        titleEl.textContent = title;
+        iframe.src = filePath;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      };
+
+      // Theme toggle engine (consistent with app.js)
+      function initThemeToggle() {
+        const toggleBtn = document.getElementById('theme-toggle');
+        if (!toggleBtn) return;
+
+        const iconEl = toggleBtn.querySelector('.theme-toggle-icon');
+        const root = document.documentElement;
+
+        const savedTheme = localStorage.getItem('mec-theme') || 'light';
+        applyTheme(savedTheme, false);
+
+        toggleBtn.addEventListener('click', () => {
+          const currentTheme = root.getAttribute('data-theme') === 'light' ? 'light' : 'dark';
+          const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+          applyTheme(newTheme, true);
+        });
+
+        function applyTheme(theme, animate) {
+          if (theme === 'light') {
+            root.setAttribute('data-theme', 'light');
+          } else {
+            root.removeAttribute('data-theme');
+          }
+          if (iconEl) {
+            iconEl.textContent = theme === 'light' ? '☀️' : '🌙';
+          }
+          localStorage.setItem('mec-theme', theme);
+        }
+      }
+
+      // Mobile Menu navigation
+      function initNavigation() {
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+        const navOverlay = document.getElementById('nav-overlay');
+
+        if (navToggle) {
+          navToggle.addEventListener('click', () => {
+            const isOpen = navLinks.classList.toggle('open');
+            navToggle.classList.toggle('active');
+            if (navOverlay) navOverlay.classList.toggle('show', isOpen);
+            document.body.style.overflow = isOpen ? 'hidden' : '';
+          });
+        }
+
+        if (navOverlay) {
+          navOverlay.addEventListener('click', () => {
+            navLinks.classList.remove('open');
+            navToggle.classList.remove('active');
+            navOverlay.classList.remove('show');
+            document.body.style.overflow = '';
+          });
+        }
+      }
+
+      function initFloatingControls() {
+        const scrollTopBtn = document.getElementById('scroll-top-btn');
+        if (!scrollTopBtn) return;
+
+        window.addEventListener('scroll', () => {
+          if (window.pageYOffset > 300) {
+            scrollTopBtn.classList.add('visible');
+          } else {
+            scrollTopBtn.classList.remove('visible');
+          }
+        }, { passive: true });
+
+        scrollTopBtn.addEventListener('click', () => {
+          smoothScrollToTop();
+        });
+      }
+
+      function smoothScrollToTop() {
+        const startPos = window.pageYOffset;
+        if (startPos === 0) return;
+        const duration = 800;
+        let startTime = null;
+
+        function animation(currentTime) {
+          if (startTime === null) startTime = currentTime;
+          const timeElapsed = currentTime - startTime;
+          const progress = Math.min(timeElapsed / duration, 1);
+          const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+          window.scrollTo(0, startPos * (1 - easeOutCubic));
+
+          if (timeElapsed < duration) {
+            requestAnimationFrame(animation);
+          } else {
+            window.scrollTo(0, 0);
+          }
+        }
+        requestAnimationFrame(animation);
+      }
+    });
+  </script>
+
+  <!-- Floating Action Controls -->
+  <div class="floating-controls">
+    <button class="scroll-top-btn" id="scroll-top-btn" aria-label="เลื่อนขึ้นไปด้านบนสุด" title="เลื่อนขึ้นด้านบน">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+    <a href="https://www.facebook.com/PhichitMedicalEducation" target="_blank" rel="noopener noreferrer" class="chat-float-btn" id="chat-float-btn" aria-label="ติดต่อสอบถามทาง Facebook" title="ติดต่อสอบถามทาง Facebook">
+      <div class="chat-float-icon">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.477 2 2 6.145 2 11.258c0 2.91 1.45 5.51 3.716 7.218V22l3.407-1.87c.928.257 1.91.395 2.917.395 5.523 0 10-4.145 10-9.258C22 6.145 17.523 2 12 2zm1.06 12.422l-2.544-2.716-4.965 2.716 5.46-5.797 2.607 2.716 4.902-2.716-5.46 5.797z"/>
+        </svg>
+      </div>
+    </a>
+  </div>
+</body>
+</html>

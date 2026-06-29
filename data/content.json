@@ -1,0 +1,466 @@
+{
+  "logo": {
+    "src": "assets/images/logo.png",
+    "name": "MEC Phichit",
+    "sub": "Medical Education Center",
+    "alt": "MEC Phichit Logo"
+  },
+  "tribute": {
+    "src": "assets/images/1782293418086__________6.jpg",
+    "alt": "ทรงพระเจริญ"
+  },
+  "hero": {
+    "badge": "CPIRD — Collaborative Project to Increase Production of Rural Doctors",
+    "title_line1": "ศูนย์แพทยศาสตรศึกษาชั้นคลินิก",
+    "title_line2": "โรงพยาบาลพิจิตร",
+    "subtitle": "",
+    "cta_about": "",
+    "cta_contact": "📍 ติดต่อเรา",
+    "stats": [
+      {
+        "id": "hero-excellence",
+        "number": "20",
+        "suffix": "+",
+        "label": "ปีที่ดำเนินการ"
+      },
+      {
+        "id": "hero-graduates",
+        "number": "260",
+        "suffix": "+",
+        "label": "ผลิตบัณฑิตแพทย์"
+      },
+      {
+        "id": "hero-teachers",
+        "number": "20",
+        "suffix": "คน",
+        "label": "นิสิตแพทย์ต่อชั้นปี"
+      },
+      {
+        "id": "hero-depts",
+        "number": "3",
+        "suffix": "ชั้นปี",
+        "label": "การเรียนการสอน ปี 4 - 6"
+      }
+    ]
+  },
+  "gallery": [
+    {
+      "src": "assets/images/1782204948938__________________________.png",
+      "alt": "สมเด็จพระนางเจ้าสิริกิติ์ พระบรมราชินีนาถ พระบรมราชชนนีพันปีหลวง",
+      "focal_point": "center 0%",
+      "zoom": true
+    },
+    {
+      "src": "assets/images/1782290249369__________6.jpg",
+      "alt": "สมเด็จพระเจ้าลูกเธอ เจ้าฟ้ากรมหลวงราชสาริณีสิริพัชร มหาวัชรราชธิดา",
+      "focal_point": "center 0%",
+      "zoom": false
+    },
+    {
+      "src": "assets/images/1782289061540_DSC_1419.JPG",
+      "alt": "รับปริญญา รุ่น 17 ปีการศึกษา 2568",
+      "focal_point": "center 25%",
+      "zoom": true
+    },
+    {
+      "src": "assets/images/1782289093548_S__39026789_0.jpg",
+      "alt": "นิสิตแพทย์รุ่นที่ 18",
+      "focal_point": "center 30%",
+      "zoom": true
+    },
+    {
+      "src": "assets/images/1782289890199________________.jpg",
+      "alt": "โรงพยาบาลพิจิตร",
+      "focal_point": "center center",
+      "zoom": true
+    }
+  ],
+  "about": {
+    "badge": "เกี่ยวกับเรา",
+    "title_line1": "ประวัติความเป็นมาของ",
+    "title_line2": "ศูนย์แพทยศาสตรศึกษา",
+    "visual_icon": "🏥",
+    "visual_title": "ศูนย์แพทยศาสตรศึกษาชั้นคลินิก",
+    "visual_sub": "Clinical Medical Education Center",
+    "visual_hosp": "โรงพยาบาลพิจิตร Phichit Hospital",
+    "visual_image": "assets/images/1782204006438_mec-ai.mp4",
+    "float_icon": "🏛️",
+    "float_title": "ประวัติความเป็นมา",
+    "float_detail": "เปิดดำเนินการ 18 มีนาคม 2548",
+    "paragraph1": "ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร จัดตั้งขึ้นตามมติคณะรัฐมนตรี เมื่อวันที่ 15 มิถุนายน พ.ศ. 2547 เพื่อดำเนินงานโครงการร่วมผลิตแพทย์เพิ่มเพื่อชาวชนบท (CPIRD) โดยมีความร่วมมือกับคณะแพทยศาสตร์ มหาวิทยาลัยนเรศวร และศูนย์แพทยฯในเครือข่ายอีกจำนวน 5 แห่ง เปิดดำเนินการจัดการเรียนการสอนเมื่อวันที่ 18 มีนาคม พ.ศ. 2548",
+    "paragraph2": "เปิดสอนนิสิตแพทย์ระดับชั้นคลินิก ชั้นปีที่ 4 - 6 และปัจจุบันยังเป็นโรงพยาบาลร่วมสอนของคณะแพทยศาสตร์ศิริราชพยาบาล มหาวิทยาลัยมหิดล เพื่อฝึกปฏิบัติงานนักศึกษาแพทย์ชั้นปีที่ 6 ตั้งแต่ปีการศึกษา 2562",
+    "vision_title": "วิสัยทัศน์",
+    "vision_text": "เป็นสถาบันร่วมผลิตแพทย์ที่มีมาตรฐานสากล เพื่อผลิตแพทย์ที่มีคุณภาพ \nและคุณธรรม\nㅤ\nㅤ",
+    "mission_title": "พันธกิจ",
+    "mission_text": "พัฒนาศักยภาพอาจารย์แพทย์ บุคลากร สนับสนุนงานวิจัย และบริการวิชาการเพื่อชุมชนและสังคม",
+    "history_full": "ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร มีฐานะเป็นหน่วยงานหนึ่งของโรงพยาบาลพิจิตร จัดตั้งขึ้นตามมติ คณะรัฐมนตรีเมื่อวันที่  15  มิถุนายน  พ.ศ. 2547  เห็นชอบให้โรงพยาบาลพิจิตรดำเนินงานโครงการร่วมผลิตแพทย์เพิ่มเพื่อชาวชนบท โดยร่วมมือกับคณะแพทยศาสตร์ มหาวิทยาลัยนเรศวร  โดยมีหน้าที่จัดการเรียนการสอนชั้นคลินิก (CPIRD) ให้กับนิสิตแพทย์ของคณะแพทยศาสตร์ มหาวิทยาลัยนเรศวร ในโครงการร่วมผลิตแพทย์เพิ่มเพื่อชาวชนบท เปิดดำเนินการสอนเมื่อวันที่ 18 มีนาคม พ.ศ. 2548  มีนิสิตแพทย์ระดับคลินิก ชั้นปีที่ 4 - 6 ปัจจุบันผลิตบัณฑิตแพทย์แล้วจำนวน  18  รุ่น  รวม 262 คน  ปีการศึกษา 2569 มีนิสิตแพทย์รวม 59 คน\n\n\nโครงการร่วมผลิตแพทย์เพิ่มเพื่อชาวชนบท (CPIRD) ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร\nเป็นโครงการที่เปิดรับบุคคลในกลุ่มสำเร็จการศึกษาระดับปริญญาตรีลาเรียน (Strengthening Track) โดยรับข้าราชการสังกัดสำนักงานปลัดกระทรวงสาธารณสุข ที่สำเร็จการศึกษาระดับปริญญาตรี และบุคคลทั่วไปที่สำเร็จการศึกษาระดับปริญญาตรีสายวิทยาศาสตร์สุขภาพ และต้องมีภูมิลำเนาอยู่นอกเขตกรุงเทพฯ และปริมณฑล (นครปฐม นนทบุรี ปทุมธานี สมุทรปราการ สมุทรสาคร) ไม่น้อยกว่า 5 ปีต่อเนื่อง  มีอายุไม่เกิน 30 ปี มีประสบการณ์ในการทำงานเกี่ยวกับสาธารณสุขอย่างน้อย 2 ปี และมีเงื่อนไข คุณสมบัติเฉพาะตามที่ประกาศของคณะแพทยศาสตร์  มหาวิทยาลัยนเรศวรที่กำหนดในแต่ละปีที่รับสมัคร\n\n\nการศึกษาของนิสิตแพทย์ตามโครงการฯนี้ จะใช้เวลาการศึกษา 5 ปี โดย 2 ปีแรกจะศึกษาร่วมกับนิสิตแพทย์ในโครงการต่างๆ ของคณะแพทยศาสตร์ มหาวิทยาลัยนเรศวร ในเนื้อหาหลักสูตรแพทยศาสตรศึกษา ชั้นปีที่ 2 - 3 ซึ่งเป็นเนื้อหาระดับชั้นก่อนขึ้นคลินิก อีก 3 ปีต่อมาจะเป็นการศึกษาในหลักสูตรแพทยศาสตรศึกษา ชั้นปีที่ 4 - 6 ซึ่งเป็นเนื้อหาระดับชั้นคลินิก นิสิตแพทย์จะมาเรียนและฝึกปฏิบัติงานที่ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร โครงการร่วมผลิตแพทย์เพิ่มเพื่อชาวชนบทมีวัตถุประสงค์เพื่อแก้ปัญหาการขาดแคลนแพทย์ที่ปฏิบัติงานในส่วนภูมิภาค ดังนั้นเมื่อสำเร็จการศึกษาจะต้องทำงานใช้ทุนในจังหวัดภูมิลำเนาของตนเองเป็นเวลาอย่างน้อย 3 ปี\n\n\n     ตั้งแต่ปีการศึกษา 2562 ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร ได้เข้าร่วมเป็นโรงพยาบาลร่วมสอนของคณะแพทยศาสตร์ศิริราชพยาบาล มหาวิทยาลัยมหิดล โดยรับนักศึกษาแพทย์ชั้นปีที่ 6 มาฝึกปฏิบัติงานในแผนกกุมารเวชกรรม สูติ-นรีเวชกรรม ศัลยกรรม ศัลยกรรมออร์โธปิดิกส์ และอายุรกรรม\n\tปัจจุบันรับฝึกสอนนักศึกษาแพทย์ คณะแพทยศาสตร์ศิริราชพยาบาล มหาวิทยาลัยมหิดลแล้วจำนวน 15 รุ่น\n\n\n\tปี 2566 ร่วมกับกลุ่มงานเวชกรรมสังคม เป็นสถาบันในการจัดการฝึกอบรมให้แก่แพทย์ประจำบ้านสาขาเวชศาสตร์ครอบครัว ในเขตสุขภาพที่ 3 โดยแผนงานฝึกอบรมแพทย์ประจำบ้านแบบใช้ชุมชนเป็นฐาน (Community-Based Training) ฉบับนี้ เป็นฉบับแรกที่ได้พัฒนาตามเกณฑ์การประกันคุณภาพการศึกษาของสหพันธ์แพทยศาสตร์ศึกษาโลก พ.ศ. 2558 (World Federation for Medical Education (WFME) 2015) โดยมีขอบเขตครอบคลุมพันธกิจ กระบวนการ โครงสร้าง องค์ประกอบ ผลลัพธ์หรือความสามารถที่พึงประสงค์  การประเมินผล และสิ่งแวดล้อมในการเรียนรู้ในการฝึกอบรมแพทย์ประจำบ้าน ที่มีความเชื่อมโยงและสัมพันธ์กัน เพื่อเพิ่มพูนความสามารถทางคลินิกที่มุ่งไปสู่การประกอบเวชปฏิบัติในฐานะแพทย์เวชศาสตร์ครอบครัวได้อย่างมีประสิทธิภาพ ปัจจุบันกำลังฝึกอบรมแพทย์ประจำบ้านรุ่นที่ 2",
+    "vision_full": "เป็นสถาบันร่วมผลิตแพทย์ที่มีมาตรฐานสากล เพื่อผลิตแพทย์ที่มีคุณภาพ \nและคุณธรรม",
+    "mission_full": "1. ผลิตบัณฑิตแพทย์ที่มีคุณภาพตอบสนองต่อเป้าประสงค์ของโครงการผลิตแพทย์เพื่อชาวชนบท\n2. การพัฒนาอาจารย์ บุคลากรสายสนับสนุน ของศูนย์แพทยฯ และโรงพยาบาลพิจิตร\n3. สนับสนุนวิชาการ วิจัย ในโรงพยาบาลพิจิตร และเครือข่ายระบบบริการสุขภาพ",
+    "history_image": "assets/images/1782198269283________.jpg"
+  },
+  "stats_bar": [
+    {
+      "number": "6",
+      "suffix": "",
+      "label": "เครือข่ายรวมผลิตแพทย์",
+      "sublabel": "มหาวิทยาลัยนเรศวร แพร่ ตาก อุตรดิตถ์ พุทธชินราช พิจิตร"
+    },
+    {
+      "number": "95",
+      "suffix": "%",
+      "label": "สอบผ่าน National License",
+      "sublabel": "การสอบเพื่อประเมินความรู้พื้นฐาน ทางด้านเวชกรรมการแพทย์"
+    },
+    {
+      "number": "SIRIRAJ",
+      "suffix": "",
+      "label": "สถานบันร่วมสอน นิสิตแพทย์ชั้นปีที่ 6",
+      "sublabel": "คณะแพทยศาสตร์ศิริราชพยาบาล มหาวิทยาลัยมหิดล"
+    },
+    {
+      "number": "FAMMED",
+      "suffix": "",
+      "label": "สถาบันในการจัดการฝึกอบรม",
+      "sublabel": "แพทย์ประจำบ้านสาขาเวชศาสตร์ครอบครัว"
+    }
+  ],
+  "programs": {
+    "badge": "",
+    "title_line1": "วีดีโอ",
+    "title_line2": "Presentation",
+    "subtitle": "by AcadMedNU Faculty of Medicine Naresuan University",
+    "videos": [
+      {
+        "title": "ตามติดชีวิต นสพ. ศูนย์แพทยศาสตรศึกษาชั้นคลินิก รพ.พิจิตร #medicine #doctor",
+        "youtube_id": "PcyeXxHXGgc",
+        "desc": "ตามติดชีวิตการเรียน การฝึกปฏิบัติงานในหอผู้ป่วย และกิจกรรมต่างๆ ของนิสิตแพทย์ชั้นคลินิก ณ โรงพยาบาลพิจิตร"
+      },
+      {
+        "title": "พาทัวร์การเรียนแพทย์ |ศูนย์แพทยศาสตรศึกษาชั้นคลินิก รพ.พิจิตร |",
+        "youtube_id": "8n02bI3ndgc",
+        "desc": "พาทัวร์ดูสถานที่เรียน ห้องบรรยาย ห้องฝึกทักษะหัตถการทางการแพทย์ (Skills Lab) และหอพักนิสิต"
+      }
+    ]
+  },
+  "services": {
+    "badge": "บริการศูนย์แพทย์",
+    "title_line1": "บริการ",
+    "title_line2": "สำหรับบุคลากร",
+    "subtitle": "",
+    "cards": [
+      {
+        "image": "assets/images/service_calendar.png",
+        "title": "ปฏิทินกิจกรรม",
+        "url": "calendar.html"
+      },
+      {
+        "image": "assets/images/service_meeting.png",
+        "title": "จองห้องประชุม",
+        "url": "https://phichitmec-app.github.io/roombooking/"
+      },
+      {
+        "image": "assets/images/service_dummy.png",
+        "title": "แบบฟอร์มขอใช้หุ่น",
+        "url": "https://phichitmec-app.github.io/Simulation-Phichit/"
+      },
+      {
+        "image": "assets/images/service_forms.png",
+        "title": "แบบฟอร์มออนไลน์",
+        "url": "forms.html"
+      },
+      {
+        "image": "assets/images/service_announce.png",
+        "title": "ประกาศ",
+        "url": "announcements.html"
+      },
+      {
+        "image": "assets/images/service_elective.png",
+        "title": "แบบฟอร์มขอ Elective",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLScYHbIc4uZ0fFHDeovcaYq_Xnj5F66sy19tN0jhMMQXjkDChg/viewform"
+      }
+    ]
+  },
+  "departments": {
+    "badge": "แผนกวิชา",
+    "title_line1": "กลุ่มงาน",
+    "title_line2": "วิชาการ",
+    "subtitle": "แผนกวิชาหลักที่จัดการเรียนการสอนชั้นคลินิก ครอบคลุมสาขาสำคัญทางการแพทย์",
+    "list": [
+      {
+        "icon": "🫀",
+        "title": "อายุรกรรม",
+        "title_en": "Internal Medicine",
+        "desc": "ดูแลผู้ป่วยโรคภายใน เช่น โรคหัวใจ โรคทางเดินหายใจ โรคต่อมไร้ท่อ และโรคระบบประสาท"
+      },
+      {
+        "icon": "🔬",
+        "title": "ศัลยกรรม",
+        "title_en": "Surgery",
+        "desc": "ฝึกทักษะการผ่าตัดและการดูแลผู้ป่วยศัลยกรรมทั่วไป รวมถึงภาวะฉุกเฉินทางศัลยกรรม"
+      },
+      {
+        "icon": "🦴",
+        "title": "ศัลยกรรมออร์โธปิดิกส์",
+        "title_en": "Orthopedics",
+        "desc": "การดูแลรักษาโรคและบาดเจ็บของระบบกล้ามเนื้อ กระดูก และข้อ ทั้งในเด็กและผู้ใหญ่"
+      },
+      {
+        "icon": "👶",
+        "title": "กุมารเวชกรรม",
+        "title_en": "Pediatrics",
+        "desc": "ดูแลสุขภาพเด็กตั้งแต่ทารกแรกเกิดจนถึงวัยรุ่น ครอบคลุมโรคเด็กทั่วไปและเฉพาะทาง"
+      },
+      {
+        "icon": "🤰",
+        "title": "สูติ-นรีเวชกรรม",
+        "title_en": "Obstetrics & Gynecology",
+        "desc": "การดูแลสตรีตั้งครรภ์ การคลอด และโรคทางนรีเวชวิทยา รวมถึงเวชศาสตร์การเจริญพันธุ์"
+      }
+    ]
+  },
+  "news": {
+    "badge": "ข่าวสารและกิจกรรม",
+    "title_line1": "ข่าวสาร",
+    "title_line2": "ล่าสุด",
+    "subtitle": "",
+    "list": [
+      {
+        "date": "📅 มิถุนายน 2569",
+        "title": "ขอเชิญเข้าร่วมพิธีไหว้ครู ประจำปีการศึกษา 2569",
+        "excerpt": "📅 วัน พฤหัสบดี ที่ 9 กรกฎาคม 2569 เวลา 13.00 น.\nสถานที่: ณ ห้องประชุมบึงสีไฟ ชั้น 3 อาคารศูนย์แพทย์ฯ โรงพยาบาลพิจิตร",
+        "image": "https://scontent.fbkk7-2.fna.fbcdn.net/v/t39.30808-6/724685003_993519890095610_3058015723560774170_n.jpg?stp=dst-jpg_tt6&cstp=mx2048x1448&ctp=s2048x1448&_nc_cat=104&ccb=1-7&_nc_sid=127cfc&_nc_ohc=TV3SvTXyYqYQ7kNvwGU5w2P&_nc_oc=AdpQSmmBO0QvzRbOEVRNycMXdmayxGzLEvYBVTRpS2DRtxSn36VRWinFlwzEu_Gu0RE&_nc_zt=23&_nc_ht=scontent.fbkk7-2.fna&_nc_gid=L7A5lXIrdm7JHYIsywbyhg&_nc_ss=7b2a8&oh=00_Af_kzabHLyonBpVH9dSUaAO6U3iW6Olpj7TH_obYB0HqNg&oe=6A400554",
+        "link": "https://www.facebook.com/share/p/18wtgJ2NPE/"
+      },
+      {
+        "date": "📅 พฤษภาคม 2569",
+        "title": "ผอ.รพ.พิจิตรให้โอวาทแก่นิสิตแพทย์ชั้นปีที่ 4 ปีการศึกษา 2569",
+        "excerpt": "วันที่ 28 เมษายน 2569 นายแพทย์ โสภณ โฆษิตวานิชย์ ผู้อำนวยการโรงพยาลพิจิตร ได้กล่าวต้อนรับ ให้แนวทางข้อคิดสำคัญในการปฏิบัติงานทางการแพทย์และ มอบพระเครื่องหลวงพ่อเพชร เพื่อเป็นศิริมงคลและขวัญกำลังใจในการปฏิบัติงาน  ณ ห้องประชุมกอบัว ชั้น 3 อาคารอำนวยการโรงพยาบาลพิจิตร",
+        "image": "https://scontent.fbkk10-1.fna.fbcdn.net/v/t39.30808-6/684298813_953437210770545_1453516826280452719_n.jpg?stp=dst-jpg_tt6&cstp=mx1536x2048&ctp=s1536x2048&_nc_cat=100&ccb=1-7&_nc_sid=833d8c&_nc_ohc=A4ZsbxPOiiEQ7kNvwFE8V2P&_nc_oc=AdpOqRdMUUyxjlIpJPNeEsax_QQEmjpnCP78OcnzNkQuZ_ii8x8uQhE8TzinJMzNM0A&_nc_zt=23&_nc_ht=scontent.fbkk10-1.fna&_nc_gid=zPNXuAh1UbnPkami_eFuig&_nc_ss=7b2a8&oh=00_Af82f2JsEfORE1Z2efIHBpviB39QkW5yU-5LI2VJ5tVrMg&oe=6A401364",
+        "link": "https://www.facebook.com/share/p/1BzynjkLKt/"
+      },
+      {
+        "date": "📅 เมษายน 2569",
+        "title": "กิจกรรม ค่ายแพทย์ชนบท เรียนรู้วิถีชีวิตชุมชน ประจำปีการศึกษา 2569",
+        "excerpt": "กิจกรรม ค่ายแพทย์ชนบท เรียนรู้วิถีชีวิตชุมชน วันที่ 29 และ 30 เมษายน 2569\nนำโดย แพทย์หญิงดวงพร ยอดจันทร์ นำทีมนิสิตแพทย์ ดูงาน รพ.สต.โรงช้าง ตำบลโรงช้าง อำเภอเมือง จังหวัดพิจิตร เยี่ยมบ้านผู้สูงอายุ 102 ปี และร่วมกิจกรรมปั่นปันใจ บวรร่วมใจ\nสร้างสังคมสามวัย ไม่ทอดทิ้งกัน โดยนิสิตแพทย์  นำวอร์มร่างกาย ก่อนปั่นจักรยาน  ณ วัดดงกลาง อำเภอเมืองจังหวัดพิจิตร",
+        "image": "https://scontent.fbkk10-1.fna.fbcdn.net/v/t39.30808-6/686946194_953433604104239_7023377396346449282_n.jpg?stp=dst-jpg_tt6&cstp=mx2040x1148&ctp=s2040x1148&_nc_cat=105&ccb=1-7&_nc_sid=833d8c&_nc_ohc=KGsqhmBTNI0Q7kNvwEVhKJ_&_nc_oc=Adomn_u5aY64-z1CY00C3-ecEkJYQHqe3wjW60Wwsq8k2z6-3TU5eeDdqmC3jo_99ZI&_nc_zt=23&_nc_ht=scontent.fbkk10-1.fna&_nc_gid=IMiSg9jKO_4NB3sDbqJvWg&_nc_ss=7b2a8&oh=00_Af91K2YAZ9T81bYL3eP0W7FwcI4PahfOg4AvtMbSnvU05Q&oe=6A3FECB0",
+        "link": "https://www.facebook.com/share/p/18nK3grwNp/"
+      }
+    ]
+  },
+  "contact": {
+    "badge": "ติดต่อเรา",
+    "title_line1": "ช่องทาง",
+    "title_line2": "การติดต่อ",
+    "subtitle": "",
+    "address": "ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร เลขที่ 136 ถนนบึงสีไฟ ตำบลในเมือง อำเภอเมืองพิจิตร จังหวัดพิจิตร 66000",
+    "phone": "056-613526",
+    "facebook_name": "ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร",
+    "facebook_url": "https://www.facebook.com/PhichitMedicalEducation",
+    "hours": "จันทร์ - ศุกร์ | 08:30 น. - 16:30 น. (เว้นวันหยุดราชการ)"
+  },
+  "footer": {
+    "desc": "ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร \nภายใต้โครงการร่วมผลิตแพทย์เพิ่มเพื่อชาวชนบท (CPIRD)",
+    "copy": "© 2569 ศูนย์แพทยศาสตรศึกษาชั้นคลินิก โรงพยาบาลพิจิตร. สงวนลิขสิทธิ์.",
+    "credits": "Medical Education Center Phichit Hospital — CPIRD",
+    "socials": [],
+    "quick_links": [
+      {
+        "label": "เกี่ยวกับเรา",
+        "url": "#about"
+      },
+      {
+        "label": "บริการ",
+        "url": "#services"
+      },
+      {
+        "label": "ข่าวสาร",
+        "url": "#news"
+      },
+      {
+        "label": "สโมสรนิสิต",
+        "url": "#student-union"
+      },
+      {
+        "label": "ติดต่อเรา",
+        "url": "#contact"
+      }
+    ],
+    "partner_links": [
+      {
+        "label": "สพพ. (CPIRD)",
+        "url": "https://www.cpird.in.th"
+      },
+      {
+        "label": "มหาวิทยาลัยนเรศวร",
+        "url": "https://www.nu.ac.th"
+      },
+      {
+        "label": "ศิริราชพยาบาล",
+        "url": "https://www.si.mahidol.ac.th"
+      },
+      {
+        "label": "โรงพยาบาลพิจิตร",
+        "url": "https://pch.moph.go.th/"
+      }
+    ],
+    "resource_links": [
+      {
+        "label": "คลังความรู้ (MedNU)",
+        "url": "https://meded.nu.ac.th/mednustorehouse/"
+      },
+      {
+        "label": "ศูนย์ความรู้ (MedNU)",
+        "url": "https://meded.nu.ac.th/courseware/"
+      },
+      {
+        "label": "วารสารโรงพยาบาล",
+        "url": "https://drive.google.com/drive/folders/1wDAzh-OhU5RoW9NQzScvDjNPVw4T6Wzi?usp=drive_link"
+      }
+    ]
+  },
+  "calendar_info": {
+    "title_line1": "ปฏิทิน",
+    "title_line2": "กิจกรรม",
+    "subtitle": ""
+  },
+  "calendar": [
+    {
+      "title": "Rotation ปีการศึกษา 2569",
+      "date": "2026-06-29",
+      "file": "assets/documents/1782708797069_Rotation69-.pdf"
+    }
+  ],
+  "forms_info": {
+    "title_line1": "",
+    "title_line2": "แบบฟอร์มออนไลน์",
+    "subtitle": ""
+  },
+  "forms": [
+    {
+      "title": "ใบลานิสิตแพทย์",
+      "date": "2026-06-29",
+      "file": "assets/documents/1782703392998_______________.pdf",
+      "type": "pdf"
+    },
+    {
+      "title": "ใบคำร้องขอศึกษารายวิชาเลือก",
+      "date": "2026-06-29",
+      "file": "assets/documents/1782703410235____________________________.pdf",
+      "type": "pdf"
+    },
+    {
+      "title": "แบบคำร้องขออุทธรณ์ในรายวิชา",
+      "date": "2026-06-29",
+      "file": "assets/documents/1782703437786______________________________1_.pdf",
+      "type": "pdf"
+    }
+  ],
+  "announcements_info": {
+    "title_line1": "",
+    "title_line2": "ประกาศ & คำสั่ง",
+    "subtitle": ""
+  },
+  "announcements": [
+    {
+      "title": "แนวทางปฏิบัติงานในชั้นคลินิกของนิสิตแพทย์",
+      "date": "2026-06-29",
+      "file": "assets/documents/1782708369800_Rotation69-.pdf",
+      "type": "pdf"
+    },
+    {
+      "title": "แนวทางปฏิบัติ การอุทธรณ์ผลการสอบ",
+      "date": "2026-06-29",
+      "file": "assets/documents/1782704217619___3.1.6___________________________1_.pdf",
+      "type": "pdf"
+    },
+    {
+      "title": "ระบบการให้คำปรึกษานิสิต",
+      "date": "2026-06-29",
+      "file": "assets/documents/1782704233018__________________________1_.pdf",
+      "type": "pdf"
+    },
+    {
+      "title": "แนวปฏิบัติของนิสิตแพทย์ในการเข้าถึงข้อมูลผู้ป่วย",
+      "date": "2026-06-29",
+      "file": "assets/documents/1782704250404_______________________________1_.pdf",
+      "type": "pdf"
+    },
+    {
+      "title": "PDPA โรงพยาบาลพิจิตร",
+      "date": "2026-06-29",
+      "file": "assets/documents/1782704273219_PDPA__________________1_.pdf",
+      "type": "pdf"
+    },
+    {
+      "title": "ประกาศ นโยบายและแนวปฏิบัติในการรักษาความมั่นคงปลอดภัย ด้านสารสนเทศ โรงพยาบาลพิจิตร",
+      "date": "2026-06-29",
+      "file": "assets/documents/1782704288662_________________________________________________________.pdf",
+      "type": "pdf"
+    },
+    {
+      "title": "นโยบายด้านการศึกษา 2567",
+      "date": "2026-06-29",
+      "file": "assets/documents/1782704301763____________________2567.pdf",
+      "type": "pdf"
+    },
+    {
+      "title": "นโยบายการปฏิบัติตัวสำหรับนิสิตแพทย์ฯ ปีการศึกษา 2566",
+      "date": "2026-06-29",
+      "file": "assets/documents/1782704312857_____________________________________2566.pdf",
+      "type": "pdf"
+    },
+    {
+      "title": "กำหนดหลักเกณฑ์การแต่งกายของนิสิตแพทย์",
+      "date": "2026-06-29",
+      "file": "assets/documents/1782704349721__________________________________.pdf",
+      "type": "pdf"
+    },
+    {
+      "title": "ระเบียบการแต่งกาย",
+      "date": "2026-06-29",
+      "file": "assets/documents/1782704372586__________________.pdf",
+      "type": "pdf"
+    }
+  ],
+  "student_union": {
+    "badge": "สโมสรนิสิต",
+    "title_line1": "สโมสรนิสิต",
+    "title_line2": "medphichit.samo",
+    "subtitle": "",
+    "profile": {
+      "username": "medphichit.samo.official",
+      "ig_url": "https://www.instagram.com/medphichit.samo.official/",
+      "avatar": "assets/images/samologo.jpg",
+      "posts_count": "245",
+      "followers_count": "150+",
+      "following_count": "2+",
+      "bio": "✨ สโมสรนิสิตแพทย์ รพ.พิจิตร (MEC Phichit Student Union)\n👨‍⚕️🩺 กิจกรรม ข่าวสาร และการขับเคลื่อนโดยนิสิตแพทย์\n📍 โรงพยาบาลพิจิตร"
+    },
+    "posts": [
+      {
+        "likes": 58,
+        "comments": 0,
+        "date": "2026-06-15",
+        "image": "",
+        "caption": "Extern 2026 On service",
+        "embed_code": "<blockquote class=\"instagram-media\" data-instgrm-captioned data-instgrm-permalink=\"https://www.instagram.com/p/DX4BgYNiiPT/?utm_source=ig_embed&utm_campaign=loading\" data-instgrm-version=\"14\" style=\" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);\"><div style=\"padding:16px;\"> <a href=\"https://www.instagram.com/p/DX4BgYNiiPT/?utm_source=ig_embed&utm_campaign=loading\" style=\" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;\" target=\"_blank\"> <div style=\" display: flex; flex-direction: row; align-items: center;\"> <div style=\"background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;\"></div> <div style=\"display: flex; flex-direction: column; flex-grow: 1; justify-content: center;\"> <div style=\" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;\"></div> <div style=\" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;\"></div></div></div><div style=\"padding: 19% 0;\"></div> <div style=\"display:block; height:50px; margin:0 auto 12px; width:50px;\"><svg width=\"50px\" height=\"50px\" viewBox=\"0 0 60 60\" version=\"1.1\" xmlns=\"https://www.w3.org/2000/svg\" xmlns:xlink=\"https://www.w3.org/1999/xlink\"><g stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\"><g transform=\"translate(-511.000000, -20.000000)\" fill=\"#000000\"><g><path d=\"M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631\"></path></g></g></g></svg></div><div style=\"padding-top: 8px;\"> <div style=\" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;\">View this post on Instagram</div></div><div style=\"padding: 12.5% 0;\"></div> <div style=\"display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;\"><div> <div style=\"background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);\"></div> <div style=\"background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;\"></div> <div style=\"background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);\"></div></div><div style=\"margin-left: 8px;\"> <div style=\" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;\"></div> <div style=\" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)\"></div></div><div style=\"margin-left: auto;\"> <div style=\" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);\"></div> <div style=\" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);\"></div> <div style=\" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);\"></div></div></div> <div style=\"display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;\"> <div style=\" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;\"></div> <div style=\" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;\"></div></div></a><p style=\" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;\"><a href=\"https://www.instagram.com/p/DX4BgYNiiPT/?utm_source=ig_embed&utm_campaign=loading\" style=\" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;\" target=\"_blank\">A post shared by Samo.Medphichit (@medphichit.samo.official)</a></p></div></blockquote>\n<script async src=\"//www.instagram.com/embed.js\"></script>"
+      },
+      {
+        "likes": 69,
+        "comments": 0,
+        "date": "2026-06-20",
+        "image": "assets/images/samo_post2.png",
+        "caption": "สำหรับการเตรียมความพร้อม ACLS สำหรับ Extern",
+        "embed_code": "https://www.instagram.com/p/DXv8MEJmgX3/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      },
+      {
+        "likes": 23,
+        "comments": 0,
+        "date": "2026-06-25",
+        "image": "assets/images/samo_post3.png",
+        "caption": "Rotate A 2026",
+        "embed_code": "https://www.instagram.com/p/DX4CmbrCv1a/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      }
+    ]
+  }
+}
