@@ -155,12 +155,12 @@
       {
         "image": "assets/images/service_meeting.png",
         "title": "จองห้องประชุม",
-        "url": "https://phichitmec-app.github.io/roombooking/"
+        "url": "https://phichitmec.github.io/roombooking/"
       },
       {
         "image": "assets/images/service_dummy.png",
         "title": "แบบฟอร์มขอใช้หุ่น",
-        "url": "https://phichitmec-app.github.io/Simulation-Phichit/"
+        "url": "https://phichitmec.github.io/Simulation-Phichit/"
       },
       {
         "image": "assets/images/service_forms.png",
