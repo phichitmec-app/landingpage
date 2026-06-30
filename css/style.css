@@ -827,7 +827,7 @@ ol {
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 900px;
+  max-width: 1200px;
   padding: 0 var(--container-padding);
 }
 
@@ -891,7 +891,9 @@ ol {
 
 .hero-title-line {
   display: block;
-  white-space: nowrap;
+  white-space: normal;
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .hero-subtitle {
